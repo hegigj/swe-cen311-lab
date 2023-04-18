@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/utility.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h2>Inventory</h2>
+    <nav>
+      <button class="menu-button">
+          <span>...</span>
+      </button>
+      <ul class="menu-links">
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="views/product/product.html">Product</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const [menuButton] = document.getElementsByClassName('menu-button');
+
+    menuButton.addEventListener('click', () => {
+      const menuLinks = document.querySelector('ul.menu-links');
+      toggleClass(menuLinks, 'show');
+    });
+  </script>
+</body>
+</html>
